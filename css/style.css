@@ -71,6 +71,12 @@ body
     border-radius: 40px;
     white-space: nowrap;
     display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn:hover{
+    transform: scale(1.10);
 }
 
 /* aside */
@@ -208,14 +214,16 @@ ul{
 .aside .nav li a i{
     margin-right: 15px;
 }
-
-/* home */
-
+/* ============================================================================ */
+/* ========================== HOME SECTION ==================================== */
+/* ============================================================================ */
 .home{
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
 }
+
+/* ==================== INFO ====================== */
 
 .home .home-inform{
     flex: 0 0 60%;
@@ -249,6 +257,7 @@ h3.my-profession{
     color: var(--text-black-700);
 }
 
+/* ================== IMAGE ======================== */
 .home .home-img{
     flex: 0 0 40%;
     max-width: 40%;
@@ -256,6 +265,16 @@ h3.my-profession{
     position: relative;
 }
 
+.home-img::after{
+    content: '';
+    position: absolute;
+    height: 80px;
+    right: 20px;
+    width: 80px;
+    bottom: -40px;
+    border-right: 10px solid var(--skin-color);
+    border-bottom: 10px solid var(--skin-color);
+}
 
 .home .home-img img{
     height: 400px;
